@@ -8,5 +8,5 @@ Repo for gamedev assignments
 
 ![3D game screenshot](gameRecordings/3Dgame.jpg)
 ![Top-down tileset](gameRecordings/topdownuiandtileset.jpg)
-[Movement clip](gameRecordings/movement.mp4)
+[Movement clip](gameRecordings/movement.gif)
 
