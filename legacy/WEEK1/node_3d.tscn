@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://b47l4csua222i"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4xowi"]
+
+[sub_resource type="Sky" id="Sky_a202f"]
+sky_material = SubResource("ProceduralSkyMaterial_4xowi")
+
+[sub_resource type="Environment" id="Environment_noarx"]
+background_mode = 2
+sky = SubResource("Sky_a202f")
+
+[sub_resource type="Animation" id="Animation_4xowi"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a202f"]
+_data = {
+&"new_animation": SubResource("Animation_4xowi")
+}
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.99776334, 0.004464438, 0.06669673, -0.012259705, 0.9930646, 0.1169294, -0.06571214, -0.117485546, 0.99089813, 1.3180633, 4.3009443, 17.349897)
+fov = 50.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_noarx")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Label3D" type="Label3D" parent="Node3D"]
+transform = Transform3D(0.9975726, 0.0696346, 0, -0.0696346, 0.99757266, -7.450581e-09, 3.7252903e-09, -7.450581e-09, 1, 0.41351688, 3.6732814, 1.3128872)
+billboard = 1
+text = "HELLO WORLD"
+font_size = 500
+outline_size = 20
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node3D"]
+libraries = {
+&"": SubResource("AnimationLibrary_a202f")
+}
