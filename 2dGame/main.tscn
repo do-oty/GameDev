@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://yo1ep1eimb5"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_18f7q"]
 [ext_resource type="Script" uid="uid://b0qiyeiw2lvis" path="res://player.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dnf0gibib13tl" path="res://spritesheet1.png" id="2_0xm2m"]
 [ext_resource type="TileSet" uid="uid://cy828nr6n1t4m" path="res://tileset.tres" id="3_h2yge"]
@@ -274,6 +275,7 @@ animations = [{
 size = Vector2(9.5, 7.5)
 
 [node name="Main" type="Node2D" unique_id=1486689597]
+script = ExtResource("1_18f7q")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=807389800]
 script = ExtResource("1_ig7tw")
@@ -287,6 +289,15 @@ animation = &"idle_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2114651062]
 position = Vector2(115, 118)
 shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="RoleLabel" type="Label" parent="Player"]
+offset_left = 97.0
+offset_top = 78.0
+offset_right = 135.0
+offset_bottom = 101.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 10
+text = "PEER"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1561297490]
 position = Vector2(115, 114)
